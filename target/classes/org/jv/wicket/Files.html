@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Carmen Sandiego - Files</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+		
+		<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	</head>
+	
+	<body>
+		<div align= center class="bg-success">
+			<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbbjKURhxeT-O-C22rAYscfZzV-AF9H5yQUCwLPo-dIFAdE0Iz" width="100px" height="100px" alt="Carmen Sandiego Logo" class="img-circle">
+			<h1>Carmen Sandiego - Files</h1>
+			<button type="button" class="btn btn-primary" align="left" wicket:id="worldmap">MAPAMUNDI</button>
+			<button type="button" class="btn btn-primary" align="center" wicket:id="files">EXPEDIENTES</button>
+            
+        </div> 
+		
+		<div>
+            <div align= center>
+                <h2> Expedientes </h2>
+            </div>
+        </div>
+        
+         
+        <div>
+             <div class="col-md-3">   
+                <div class="panel panel-primary">
+                    <p class="text-info"><b>Expedientes</b></p>
+                    
+                    
+                    
+                     <form wicket:id="aVillainForm">                   
+		                <table id="main" width="80%" border="1">
+		                	<thead>
+		                		<tr>
+					               	<th id="main" width="70%" align="left">Villano</th>
+					               	<th id="main" width="30%" align="left"> </th>
+				               	</tr>
+				            </thead>
+				            <tbody>
+				               	<tr id="main" width="80%" wicket:id="files">
+				                   	<td id="main" width="20%">
+				                   	    <span wicket:id="name"> {Lista con Nombres de paises}  </span> 
+				               	    </td>
+				               	    <td id="main" width="80%">
+					               	    <div class="btn-group">
+					               	   		<a href="#" wicket:id="editar">Editar</a>
+				           	        		<!-- <button type="button" wicket:id="editar" class="btn-link">Editar</button> -->
+				           	        		<button type="button" wicket:id="eliminar" class="btn-link">Eliminar</button>
+				           	        	</div>
+				           	        </td>
+				               	</tr>
+				               	<tr><td align="right"> <button type="button" class="btn btn-primary">Nuevo Villano</button> </td></tr>
+				           </tbody>
+			           	</table>
+			        </form>
+                </div>    
+           	 </div>
+         
+             <div align="center" class="col-md-4">   
+                <div class="panel panel-primary">
+                    <p class="text-info"><b>Informacion de Villano</b></p>
+                    <!-- <button type="button" class="btn btn-primary">Emitir orden</button><br/> -->
+                    <div align= center>
+                    <form wicket:id="aVillain">
+	                    <table width="80%">
+							<tr><td><label> NOMBRE </label></td></tr>
+							<tr><td><label wicket:id="villainName">{El nombre del pais}</label></td></tr>
+							<tr>
+								<td align="center">
+									<span wicket:id="gender"></span>
+								</td></tr>
+							<tr><td><label>CARACTERISTICAS</label></td></tr>
+							<tr width="50%" wicket:id="signs">
+								<td width="50%"> 
+									<span wicket:id="signName">{lista de señas} </span>
+								</td>
+								<td width="15%"> 
+			       	            	<input wicket:id="Eliminar" type="submit" value="Eliminar"/>
+			   	                </td>
+							</tr>
+							<tr width="50%">
+								<td width="50%"><input type="text" name="newSign"> </td>
+								<td width="15%"> 
+			       	            	<input type="submit" value="Agregar"/>
+			   	                </td>
+							</tr>						
+							<tr><td><label>HOBBIES</label></td></tr>
+							<tr width="50%" wicket:id="hobbies">
+								<td width="50%">
+									<span wicket:id="hobbieName">{lista de hobbies}</span>
+								</td>
+								<td width="15%"> 
+			       	            	<input wicket:id="Eliminar" type="submit" value="Eliminar"/>
+			   	                </td>
+							</tr>
+							<tr width="50%">
+								<td width="50%"><input type="text" name="newHobbie"></td>
+								<td width="15%"> 
+			       	            	<input type="submit" value="Agregar"/>
+			   	                </td>
+							</tr>
+							<tr><td align="right"> <button type="button" class="btn btn-primary">Aceptar Cambios</button> </td></tr>
+						</table>
+					</form>
+              
+         		   </div>
+	                
+                </div>    
+           	 </div>
+         </div>
+          
+		
+		
+		
+		
+		
+	</body>
+</html>
