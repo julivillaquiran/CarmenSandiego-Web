@@ -21,7 +21,6 @@
 		<div>
             <div align= center>
                 <h2> WorldMap </h2>
-                <!-- <label wicket:id="test"></label> -->
             </div>
         </div>
          
@@ -45,12 +44,15 @@
 				               	    <td id="main" width="80%">
 					               	    <div class="btn-group">
 					               	   		<a href="#" wicket:id="editar">Editar</a>
-				           	        		<!-- <button type="button" wicket:id="editar" class="btn-link">Editar</button> -->
-				           	        		<button type="button" wicket:id="eliminar" class="btn-link">Eliminar</button>
+					               	   		<button type="button" wicket:id="eliminar" class="btn-link">Eliminar</button>
 				           	        	</div>
 				           	        </td>
 				               	</tr>
-				               	<tr><td align="right"> <button type="button" class="btn btn-primary">Nuevo Pais</button> </td></tr>
+				               	<tr>
+				               		<td align="right"> 
+				               			<input wicket:id="newCountry" type="submit" class="btn btn-primary" value="Nuevo Pais" /> 
+				               		</td>
+				               	</tr>
 				           </tbody>
 			           	</table>
 			        </form>
@@ -67,7 +69,7 @@
 							<tr>
 								<td><label> NOMBRE </label></td>
 							</tr>
-							<tr><td><label wicket:id="countryName">{El nombre del pais}</label></td></tr>
+							<tr><td><input wicket:id="countryName" /></td></tr>
 							<tr><td><label>CARACTERISTICAS</label></td></tr>
 							<tr width="50%"  wicket:id="characteristics">
 								<td width="50%"> 
@@ -78,9 +80,9 @@
 			   	                </td>
 							</tr>
 							<tr width="50%">
-								<td width="50%"><input type="text" name="newSign"> </td>
+								<td width="50%"><input wicket:id="newSign" type="text" name="newSign"> </td>
 								<td width="15%"> 
-			       	            	<input type="submit" value="Agregar"/>
+			       	            	<input  wicket:id="addSign" type="submit" value="Agregar"/>
 			   	                </td>
 							</tr>		
 							<tr><td><label>CONEXIONES</label></td></tr>
@@ -93,9 +95,9 @@
 			   	                </td>
 							</tr>
 							<tr width="50%">
-								<td width="50%"><select name="interesPlace"></select></td>
+								<td width="50%"><select wicket:id="connectionsOptions" name="connections"></select></td>
 								<td width="15%"> 
-			       	            	<input type="submit" value="Agregar"/>
+			       	            	<input wicket:id="addConnections" type="submit" value="Agregar"/>
 			   	                </td>
 							</tr>		
 							<tr><td><label>LUGARES DE INTERES</label></td></tr>
@@ -108,12 +110,16 @@
 			   	                </td>
 							</tr>
 							<tr width="50%">
-								<td width="50%"><select name="interesPlace"></select></td>
+								<td width="50%"><select  wicket:id="interesPlace" name="interesPlace"></select></td>
 								<td width="15%"> 
-			       	            	<input type="submit" value="Agregar"/>
+			       	            	<input wicket:id="addPlaces" type="submit" value="Agregar"/>
 			   	                </td>
 							</tr>
-							<tr><td align="right"> <button type="button" class="btn btn-primary">Aceptar Cambios</button> </td></tr>
+							<tr>
+								<td align="right"> 
+									<button  wicket:id="newCountry" type="submit" class="btn btn-primary">Aceptar Cambios</button> 
+								</td>
+							</tr>
 						</table>
          		   	</form>
          		   </div>
